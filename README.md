@@ -1,153 +1,124 @@
 🌱 Crop Heat-Stress Warning System
 
-Low-Cost Analog Temperature Monitoring and Early Warning System
-
-"Smart Agriculture" (https://placehold.co/1200x400/2e7d32/ffffff?text=Crop+Heat-Stress+Warning+System)
-
 📌 Project Overview
 
-The Crop Heat-Stress Warning System is a low-cost analog electronic system designed to monitor temperature conditions and provide visual and audio warnings when crops are exposed to excessive heat.
+The Crop Heat-Stress Warning System is a low-cost electronic monitoring system designed to detect temperature conditions that may cause heat stress in crops. It uses an NTC thermistor and LM358 operational amplifier comparators to monitor temperature and provide visual and audible warnings.
 
-Using an LM358 operational amplifier as a comparator, an NTC thermistor, and three LED indicators, the system identifies different temperature conditions without requiring a microcontroller or Arduino.
+The system uses three LED indicators to represent different temperature conditions. A buzzer provides an additional warning when the temperature exceeds the critical threshold.
 
-🚨 Problem Statement
+🎯 Problem Statement
 
-High temperatures can cause heat stress in crops, affecting plant growth, productivity, and agricultural yield.
+High temperatures can negatively affect crop growth, plant health, and agricultural productivity. Farmers may not always have access to affordable temperature monitoring systems that provide immediate alerts.
 
-Farmers may not always identify rising temperature conditions early enough to take preventive action.
-
-This project aims to provide a simple, affordable, and real-time warning mechanism to help identify potentially harmful temperature conditions.
+This project addresses the problem by developing a simple, low-cost electronic system that monitors temperature and alerts users when heat conditions become critical.
 
 💡 Proposed Solution
 
-The proposed system uses an NTC thermistor to sense temperature variations. Two LM358 comparator circuits compare the sensed temperature against predefined reference levels.
+The system measures temperature using an NTC thermistor. The sensor voltage is compared with preset reference voltages using LM358 comparator circuits.
 
-Based on the temperature condition, the system activates different indicators:
+Based on the detected temperature, the system activates the appropriate LED indicator:
 
-- 🟢 Green LED: Normal temperature below 30°C.
-- 🟡 Yellow LED: Warning condition between 30°C and 35°C.
-- 🔴 Red LED and buzzer: High-temperature alert above 35°C.
+- 🟢 Green LED: Normal temperature condition
+- 🟡 Yellow LED: Temperature warning condition
+- 🔴 Red LED and buzzer: High-temperature alert
 
-📸 Project Images
+📸 Project Photos
 
-🔧 Hardware Prototype – Normal Condition
+🟢 Normal Temperature Condition
 
-Temperature below 30°C.
+Green LED indicates the normal temperature condition.
 
-"Normal Condition" (images/normal-condition.jpg)
+IMG-20261103-WA0009.jpg
 
-⚠️ Hardware Prototype – Warning Condition
+🟡 Temperature Warning Condition
 
-Temperature between 30°C and 35°C.
+Yellow LED indicates that the temperature has reached the warning range.
 
-"Warning Condition" (images/warning-condition.jpg)
+IMG-20261103-WA0010.jpg
 
-🚨 Hardware Prototype – High Temperature Condition
+🔴 High Temperature Warning
 
-Temperature above 35°C.
+Red LED indicates the high-temperature condition. The buzzer provides an audible warning.
 
-"High Temperature Condition" (images/high-temperature.jpg)
+IMG-20261103-WA0011.jpg
 
-📐 Circuit Diagram
+«Note: These image links work only if the matching image files are uploaded to the repository's main branch with these exact filenames.»
 
-"Circuit Diagram" (images/circuit-diagram.jpg)
+⚙️ Working Principle
 
-⚙️ Components Used
+1. The NTC thermistor senses the surrounding temperature.
+2. The thermistor resistance changes with temperature.
+3. The sensor circuit converts the resistance variation into a voltage variation.
+4. The LM358 comparator circuits compare the sensor voltage with preset reference voltages.
+5. The corresponding LED indicates the temperature condition.
+6. When the temperature exceeds the critical threshold, the red LED and buzzer are activated.
 
-"Components Used" (images/components.jpg)
+🌡️ Temperature Indication
 
-⚙️ Components Used
+Temperature| Indication| Condition
+Below 30°C| 🟢 Green LED| Normal
+30°C–35°C| 🟡 Yellow LED| Warning
+Above 35°C| 🔴 Red LED + Buzzer| High-temperature alert
 
-Component| Quantity
-LM358 Operational Amplifier| 2 ICs
-NTC Thermistor| 10KΩ
-Resistors| As required
-Potentiometers| As required
-Green LED| 1
-Yellow LED| 1
-Red LED| 1
-Active Buzzer| 1
-Breadboard| 1
-Jumper Wires| As required
-5V Regulated Power Supply| 1
+The thresholds are preset values for this prototype and can be adjusted according to crop requirements.
 
-🔄 Working Principle
+🔧 Components Required
 
-1. Temperature Sensing
+- LM358 operational amplifier IC – 2
+- NTC thermistor – 1
+- Resistors
+- Potentiometers
+- Green LED
+- Yellow LED
+- Red LED
+- Active buzzer
+- Breadboards
+- Jumper wires
+- 5V power supply
 
-The NTC thermistor detects temperature variations.
+✨ Features
 
-2. Voltage Conversion
-
-The thermistor circuit converts temperature changes into corresponding voltage variations.
-
-3. Comparison
-
-Two LM358 comparator stages compare the sensed voltage with reference voltages.
-
-4. Normal Condition
-
-The green LED indicates temperatures below 30°C.
-
-5. Warning Condition
-
-The yellow LED indicates temperatures between 30°C and 35°C.
-
-6. Overheat Condition
-
-The red LED and buzzer provide an alert when the temperature exceeds 35°C.
-
-✨ Key Features
-
-- Real-time temperature monitoring.
-- Three-level temperature indication.
-- Dual comparator-based warning mechanism.
-- Low-cost analog circuit design.
-- No Arduino or microcontroller required.
-- Simple and portable hardware implementation.
-- Audio warning during high-temperature conditions.
+- Low-cost temperature monitoring
+- Three-level temperature indication
+- Visual warning using LEDs
+- Audible alert using a buzzer
+- Simple analog circuit
+- Adjustable temperature thresholds
+- Suitable for educational and prototype applications
 
 🌾 Applications
 
-- Agricultural temperature monitoring.
-- Greenhouse monitoring.
-- Crop heat-stress indication.
-- Small-scale farming environments.
-- Plant growth monitoring systems.
-- Smart agriculture applications.
+- Agricultural temperature monitoring
+- Greenhouse temperature warning
+- Small-scale crop monitoring
+- Plant research and demonstration
+- Electronics and sensor-based projects
 
 🚀 Future Scope
 
-- Integration with IoT-based monitoring.
-- Wireless notifications to farmers.
-- Solar-powered operation.
-- Multiple temperature sensing points.
-- Humidity monitoring integration.
-- Automatic irrigation or cooling system integration.
+- Integration with Arduino or ESP32
+- Digital temperature display
+- Wireless notification using Wi-Fi
+- Mobile application monitoring
+- Solar-powered operation
+- Data logging and temperature history
+- Crop-specific temperature thresholds
 
-🌍 Project Impact
+📚 Project Impact
 
-This project demonstrates an affordable analog-based approach to identifying potentially harmful temperature conditions in agricultural environments.
+This project demonstrates how basic electronic components can be used to monitor environmental conditions and provide early warnings. It offers an educational prototype for exploring sensor circuits, comparator operation, and agricultural monitoring.
 
-It aims to support early awareness of crop heat stress and encourage timely preventive action.
+🏫 Project Information
 
-👩‍💻 Project Information
+Department: Electronics and Communication Engineering (ECE)
+Project Title: Crop Heat-Stress Warning System
+Project Type: Analog Electronics / Sensor-Based Monitoring
+Power Supply: 5V
 
-Category| Details
-Project Domain| Electronics and Communication Engineering
-Focus Areas| Analog Electronics, Sensors and Agricultural Technology
-Controller| No Arduino or microcontroller
-Main IC| LM358
-Temperature Sensor| 10KΩ NTC Thermistor
-Power Supply| 5V DC
-Project Type| Hardware Prototype
+👩‍💻 Author
 
-🌱 Smart Electronics for Smarter Agriculture
+Satveka
 
-Low-Cost Electronics • Early Warning • Sustainable Farming
-
----
-
-📄 License
+📝 License
 
 This project is intended for educational and academic purposes.
