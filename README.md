@@ -24,22 +24,19 @@ Based on the temperature condition, the system activates different indicators:
 Green LED – Normal temperature (Below 30°C).
 Yellow LED – Warning condition (30°C–35°C).
 Red LED and buzzer – High-temperature alert (Above 35°C).
-## 📸 Project Images
+📸 Project Images
 
-### 🔧 Hardware Prototype – Normal Condition
-![Normal Condition](normal.jpg)
+🔧 Hardware Prototype – Normal Condition
 
-### ⚠️ Hardware Prototype – Warning Condition
-![Warning Condition](warning.jpg)
+"Normal Condition" (normal-condition.jpg)
 
-### 🚨 Hardware Prototype – High Temperature
-![High Temperature](high-temperature.jpg)
+⚠️ Hardware Prototype – Warning Condition
 
-### 📐 Circuit Diagram
-![Circuit Diagram](circuit.jpg)
+"Warning Condition" (warning-condition.jpg)
 
-### ⚙️ Components Used
-![Components](components.jpg)
+🚨 Hardware Prototype – High Temperature
+
+"High Temperature" (high-temperature.jpg)
 
 ⚙️ Components Used
 
